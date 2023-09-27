@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Kanit&family=Poppins:wght@500;600;700;900&display=swap" rel="stylesheet">
+      <meta charset="utf-8">
+      <link rel="shortcut icon" type="x-icon"  href="images/Logos.png">
+      <title>bu2web - Home</title>
+      <link rel="stylesheet" href="style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   
+   <body>
+      <nav>
+         <div class="menu-icon">
+            <span class="fas fa-bars"></span>
+         </div>
+         <div class="logo">
+            bu2web
+         </div>
+         <div class="nav-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="https://discord.gg/Yvh9NrqRSP" target="_blank" >Discord</a></li>
+            <li><a href="#" >Donate</a></li>
+            <li><a href="#" >Settings</a></li>
+         </div>
+         <div class="search-icon">
+         </div>
+         <div class="cancel-icon">
+            <span class="fas fa-times"></span>
+         </div>
+         </form>
+      </nav>
+      <div class="content">
+         <header class="space">Not finished</header>
+         <div class="space text">
+        We are working with this website <br>
+        Join our discord in the navbar! 
+         </div>
+      </div>
+      <script>
+         const menuBtn = document.querySelector(".menu-icon span");
+         const searchBtn = document.querySelector(".search-icon");
+         const cancelBtn = document.querySelector(".cancel-icon");
+         const items = document.querySelector(".nav-items");
+         const form = document.querySelector("form");
+         menuBtn.onclick = ()=>{
+           items.classList.add("active");
+           menuBtn.classList.add("hide");
+           searchBtn.classList.add("hide");
+           cancelBtn.classList.add("show");
+         }
+         cancelBtn.onclick = ()=>{
+           items.classList.remove("active");
+           menuBtn.classList.remove("hide");
+           searchBtn.classList.remove("hide");
+           cancelBtn.classList.remove("show");
+           form.classList.remove("active");
+           cancelBtn.style.color = "#ff3d00";
+         }
+         searchBtn.onclick = ()=>{
+           form.classList.add("active");
+           searchBtn.classList.add("hide");
+           cancelBtn.classList.add("show");
+         }
+      </script>
+   </body>
+</html>
